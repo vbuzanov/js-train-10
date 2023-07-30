@@ -79,7 +79,7 @@ function customObjectFromEntries(entries) {
   // Повернення створеного об'єкта
   if (Array.isArray(entries)) {
     const arr = entries.map(([key, value]) => {
-      return typeof key == "number" ? [key.toString(), value] : [key, value];
+      return typeof key == "number" ? [String(key), value] : [key, value];
     });
     return Object.fromEntries(arr);
   } else {
